@@ -8,6 +8,7 @@ public class Eagle  extends Animated implements Animal {
     private final double MAX_COUNT_IN_CELL;
     private final double COUNT_FOOD;
     public Eagle() {
+
         this.WEIGHT = getValuesAnimal(ANIMAL).get(0);
         this.MAX_COUNT_IN_CELL = getValuesAnimal(ANIMAL).get(1);
         this.SPEED = getValuesAnimal(ANIMAL).get(2);

@@ -1,7 +1,7 @@
 import Files.GetData;
-import entity.GameMap;
-import entity.predators.Wolf;
-
+import entity.*;
+import entity.factories.PredatorsFactory;
+import entity.factories.WolfFactory;
 public class Runner {
     public static void main(String[] args) {
 
@@ -12,11 +12,16 @@ public class Runner {
         GetData getData = new GetData();
         System.out.println(getData.GetFileCharacteristics());
         System.out.println(getData.GetFileProbability());
-        Wolf predator = new Wolf();
-        System.out.println(predator.getWEIGHT());
-        System.out.println(predator.getMAX_COUNT_IN_CELL());
-        System.out.println(predator.getSPEED());
-        System.out.println(predator.getCOUNT_FOOD());
+        PredatorsFactory predatorsFactory = new WolfFactory();
+        Animated animated = predatorsFactory.createAnimated();
+        System.out.println(animated.getCOUNT_FOOD());
+
+
+//        Wolf predator = new Wolf();
+//        System.out.println(predator.getWEIGHT());
+//        System.out.println(predator.getMAX_COUNT_IN_CELL());
+//        System.out.println(predator.getSPEED());
+//        System.out.println(predator.getCOUNT_FOOD());
 
 
 

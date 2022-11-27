@@ -1,13 +1,14 @@
-package entity.predators;
+package entity.herbivore;
 import entity.Animal;
 import entity.Animated;
-public class Fox extends Animated implements Animal {
-    private final String ANIMAL = "Лиса";
+public class Rabbit extends Animated implements Animal {
+
+    private final String ANIMAL = "Кролик";
     private final double WEIGHT;
     private final double SPEED;
     private final double MAX_COUNT_IN_CELL;
     private final double COUNT_FOOD;
-    public Fox() {
+    public Rabbit() {
 
         this.WEIGHT = getValuesAnimal(ANIMAL).get(0);
         this.MAX_COUNT_IN_CELL = getValuesAnimal(ANIMAL).get(1);
@@ -26,18 +27,23 @@ public class Fox extends Animated implements Animal {
     @Override
     public void die() {
     }
+    @Override
     public String getANIMAL() {
         return ANIMAL;
     }
+    @Override
     public double getWEIGHT() {
         return WEIGHT;
     }
+    @Override
     public double getSPEED() {
         return SPEED;
     }
+    @Override
     public double getMAX_COUNT_IN_CELL() {
         return MAX_COUNT_IN_CELL;
     }
+    @Override
     public double getCOUNT_FOOD() {
         return COUNT_FOOD;
     }
