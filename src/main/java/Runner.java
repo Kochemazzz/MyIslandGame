@@ -1,20 +1,30 @@
-import Files.GetData;
-import entity.*;
-import entity.factories.PredatorsFactory;
-import entity.factories.WolfFactory;
+import entity.Animated;
+import entity.factories.AnimalsFactory;
+import entity.factories.predators.BearFactory;
+import entity.predators.Wolf;
+import files.GetData;
+
+import java.util.Map;
 public class Runner {
     public static void main(String[] args) {
 
-
-
-        GameMap gameMap = GameMap.getMap(11, 12);
-        System.out.println(gameMap.getGameMap().length);
         GetData getData = new GetData();
-        System.out.println(getData.GetFileCharacteristics());
         System.out.println(getData.GetFileProbability());
-        PredatorsFactory predatorsFactory = new WolfFactory();
-        Animated animated = predatorsFactory.createAnimated();
-        System.out.println(animated.getCOUNT_FOOD());
+        System.out.println(getData.GetFileCharacteristics());
+        System.out.println(getData.GetFileIcons());
+//        AnimalsFactory animalsFactory = new BearFactory();
+//        Animated animal = animalsFactory.createAnimal();
+//        System.out.println(animal.getCOUNT_FOOD());
+
+
+
+
+
+//        Map<String, Map<String, Double>> stringMapMap = getData.GetFileProbability();
+//        System.out.println(stringMapMap);
+//        Wolf wolf = new Wolf();
+//        System.out.println(wolf.getMAP_PROBABILITY());
+
 
 
 //        Wolf predator = new Wolf();

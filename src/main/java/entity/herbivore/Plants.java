@@ -1,16 +1,20 @@
 package entity.herbivore;
 import entity.Animated;
+
+import java.util.Map;
 public class Plants extends Animated {
     private final String ANIMAL = "Растения";
     private final double WEIGHT;
     private final double SPEED;
     private final double MAX_COUNT_IN_CELL;
     private final double COUNT_FOOD;
+    private Map<String, Double> MAP_PROBABILITY;
     public Plants() {
         this.WEIGHT = getValuesAnimal(ANIMAL).get(0);
         this.MAX_COUNT_IN_CELL = getValuesAnimal(ANIMAL).get(1);
         this.SPEED = getValuesAnimal(ANIMAL).get(2);
         this.COUNT_FOOD = getValuesAnimal(ANIMAL).get(3);
+        this.MAP_PROBABILITY = getProbabilityAnimal(ANIMAL);
     }
     @Override
     public void go() {
@@ -26,23 +30,26 @@ public class Plants extends Animated {
     }
     @Override
     public String getANIMAL() {
-        return null;
+        return this.ANIMAL;
     }
     @Override
     public double getWEIGHT() {
-        return 0;
+        return this.WEIGHT;
     }
     @Override
     public double getSPEED() {
-        return 0;
+        return this.SPEED;
     }
     @Override
     public double getMAX_COUNT_IN_CELL() {
-        return 0;
+        return this.MAX_COUNT_IN_CELL;
     }
     @Override
     public double getCOUNT_FOOD() {
-        return 0;
+        return COUNT_FOOD;
+    }
+    public Map<String, Double> getMAP_PROBABILITY() {
+        return MAP_PROBABILITY;
     }
     public void growPlant(){
         System.out.println("Растение растет");
